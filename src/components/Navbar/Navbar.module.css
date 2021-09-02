@@ -1,0 +1,28 @@
+.navbar {
+  background-color: blueviolet;
+  padding: 5px;
+  color: white;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.navbar__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  text-align: right;
+  width: 80%;
+}
+
+.navbar__list-item {
+  margin: 0 16px;
+  display: inline-block;
+
+  font-size: 20px;
+}
+
+h1 {
+  display: inline-block;
+  margin-left: 20px;
+}
