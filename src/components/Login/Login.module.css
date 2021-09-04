@@ -35,3 +35,9 @@
         margin-top: 10px;
     }
   }
+
+
+  .invalid input{
+    border-color: red;
+    background: #fbdada;
+  }
