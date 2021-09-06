@@ -7,9 +7,7 @@
   
 }
 
-.email-password{
-    margin: 30px 0;
-}
+
 
 
 .login input{
@@ -37,7 +35,4 @@
   }
 
 
-  .invalid input{
-    border-color: red;
-    background: #fbdada;
-  }
+  

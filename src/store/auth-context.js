@@ -1,15 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 const AuthContext = React.createContext({
-    isLoggedIn: false,
-    onLogout: () => {},
-    onLogin: () => {}
-})
+  isLoggedIn: false,
+  onLogout: () => {},
+  onLogin: (email,password) => {},
+});
 
-export function AuthContextProvider(props){
-
-
-const [isLoggedIn, setIsLoggedIn] = useState(false);
+export const AuthContextProvider = (props) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     const storedUserLoggedInInfo = localStorage.getItem("isLoggedIn");
@@ -25,7 +23,17 @@ const [isLoggedIn, setIsLoggedIn] = useState(false);
     setIsLoggedIn(false);
     localStorage.removeItem("isLoggedIn");
   }
+  return (
+    <AuthContext.Provider
+      value={{
+        isLoggedIn: isLoggedIn,
+        onLogout: logoutHandler,
+        onLogin: loginHandler,
+      }}
+    >
+      {props.children}
+    </AuthContext.Provider>
+  );
 }
 
-
-export default AuthContext
+export default AuthContext;

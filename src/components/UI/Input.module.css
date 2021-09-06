@@ -1,0 +1,7 @@
+.invalid input {
+  border-color: red;
+  background: #fbdada;
+}
+.email-password {
+  margin: 30px 0;
+}

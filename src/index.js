@@ -8,5 +8,7 @@ ReactDOM.render(
   <AuthContextProvider>
     <App />
   </AuthContextProvider>,
+  
   document.getElementById("root")
 );
+  
